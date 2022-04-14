@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:stripe_payment_reusable/stripe_native.dart';
+import 'package:stripe_payment_reusable/ui/add_card.dart';
+import 'package:stripe_payment_reusable/utils/stripe_native.dart';
 
 void main() {
   runApp(MyApp());
@@ -59,6 +60,12 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             TextButton(onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  AddCard()),
+              );
+              }, child: Text('Generate a token for a card using stripe')),
+            TextButton(onPressed: (){
               StripePay().checkIfNativePayReady(
                   context,
                   '20.52',
@@ -67,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   '15',
                   'Test'
               );
-            }, child: Text('Click for G-pay/Apple Pay'))
+            }, child: Text('Click for Native Pay'))
           ],
         ),
       ),
