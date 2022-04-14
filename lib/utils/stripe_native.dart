@@ -51,29 +51,29 @@ class StripePay {
   ) async {
     var items = <ApplePayItem>[];
 
-
-    if(transferAmt != null)
-      {
-        items.add(ApplePayItem(
-          label: "Attendance Fee to $val",
-          amount: "$transferAmt",
-        ));
-
-        items.add(ApplePayItem(
-          label: "Athletevue Service Fee (non-refundable)",
-          amount: "$athletevueAmt",
-        ));
-      }
-    else
-      {
-        items.add(ApplePayItem(
-          label: "Athletevue Promotion ($val Days)",
-          amount: "$amount",
-        ));
-      }
+    //OPTONAL LINE ITEM YOU CAN ADD TO APPLE PAY SHEET
+    // if(transferAmt != null)
+    //   {
+    //     items.add(ApplePayItem(
+    //       label: "Attendance Fee to $val",
+    //       amount: "$transferAmt",
+    //     ));
+    //
+    //     items.add(ApplePayItem(
+    //       label: "XYZ Service Fee (non-refundable)",
+    //       amount: "$athletevueAmt",
+    //     ));
+    //   }
+    // else
+    //   {
+    //     items.add(ApplePayItem(
+    //       label: "XYZ Promotion ($val Days)",
+    //       amount: "$amount",
+    //     ));
+    //   }
 
     items.add(ApplePayItem(
-      label: "ATHLETEVUE LLC",
+      label: "XYZ LLC",
       amount: "$amount",
     ));
 

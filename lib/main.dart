@@ -82,6 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void onPaymentCompleted(bool isSuccess, String token) async{
+    debugPrint('onPaymentcompleted $isSuccess');
     if (isSuccess == true && token != null) {
       //make and api call for payment and pass token and payment method per your requirement
     }
