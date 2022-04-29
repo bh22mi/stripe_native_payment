@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/example/stripe_payment_reusable/BuildConfig.java
+ com.example.stripe_payment_reusable.BuildConfig
